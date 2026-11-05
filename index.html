@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>蜜桃视频-蜜桃视频在线观看_高清视频播放与影视剧集推荐</title>
+<meta name="description" content="蜜桃视频是一个提供在线视频观看与影视内容推荐的主题页面，汇集高清视频播放入口、剧集分类浏览与观看指南，帮助用户快速找到想看的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a9c'/%3E%3Cstop offset='1' stop-color='%23ff4d6d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M26 20l18 12-18 12z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --peach:#ff4d6d;
+  --peach-soft:#ffe3e9;
+  --peach-deep:#d93a5c;
+  --ink:#2a1f24;
+  --ink-2:#5c4a51;
+  --ink-3:#8a757d;
+  --bg:#fffafb;
+  --card:#ffffff;
+  --line:#f2dde3;
+  --radius:16px;
+  --shadow:0 8px 28px rgba(217,58,92,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.75;font-size:16px;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,251,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;height:68px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(135deg,#ff7a9c,#ff4d6d);
+  display:grid;place-items:center;
+  box-shadow:0 4px 12px rgba(255,77,109,.35);
+}
+.logo-mark svg{width:18px;height:18px}
+.logo-text{
+  font-size:19px;font-weight:800;letter-spacing:.5px;
+  color:var(--peach-deep);
+  white-space:nowrap;
+}
+.nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav a{
+  font-size:14.5px;color:var(--ink-2);font-weight:500;
+  padding:7px 12px;border-radius:999px;transition:.2s;
+  white-space:nowrap;
+}
+.nav a:hover{background:var(--peach-soft);color:var(--peach-deep)}
+.nav a.nav-cta{
+  background:var(--peach);color:#fff;font-weight:600;
+  box-shadow:0 4px 12px rgba(255,77,109,.3);
+}
+.nav a.nav-cta:hover{background:var(--peach-deep);color:#fff}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(900px 420px at 12% -10%, #ffe9ee 0%, rgba(255,233,238,0) 70%),
+    radial-gradient(700px 380px at 92% 0%, #fff0e0 0%, rgba(255,240,224,0) 72%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--line);
+  color:var(--peach-deep);font-size:13px;font-weight:600;
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--peach)}
+h1{
+  font-size:clamp(30px,4.2vw,46px);
+  line-height:1.22;font-weight:800;letter-spacing:.5px;
+  color:var(--ink);margin-bottom:16px;
+}
+h1 .hl{
+  background:linear-gradient(transparent 62%, #ffd3dd 62%);
+  padding:0 2px;
+}
+.hero-lead{
+  font-size:16.5px;color:var(--ink-2);max-width:38em;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:600;padding:12px 24px;border-radius:999px;
+  transition:.2s;border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--peach);color:#fff;box-shadow:0 8px 20px rgba(255,77,109,.32)}
+.btn-primary:hover{background:var(--peach-deep)}
+.btn-ghost{background:#fff;color:var(--peach-deep);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--peach);background:#fff6f8}
+.btn[data-download-placeholder="true"]{pointer-events:none}
+.hero-note{
+  margin-top:20px;font-size:13px;color:var(--ink-3);
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+.hero-note span{display:inline-flex;align-items:center;gap:6px}
+.hero-note i{width:6px;height:6px;border-radius:50%;background:#ffb3c4;display:inline-block}
+
+/* hero visual */
+.hero-visual{
+  background:#fff;border-radius:22px;padding:16px;
+  box-shadow:var(--shadow);border:1px solid var(--line);
+}
+.player{
+  position:relative;border-radius:14px;overflow:hidden;
+  background:linear-gradient(135deg,#2a1f24,#4a2c38);
+  aspect-ratio:16/10;display:grid;place-items:center;
+}
+.player svg{width:100%;height:100%}
+.play-badge{
+  position:absolute;inset:0;display:grid;place-items:center;
+}
+.play-badge span{
+  width:58px;height:58px;border-radius:50%;
+  background:rgba(255,255,255,.92);
+  display:grid;place-items:center;
+  box-shadow:0 6px 20px rgba(0,0,0,.28);
+}
+.play-badge svg{width:20px;height:20px}
+.player-meta{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 6px 2px;font-size:13px;color:var(--ink-3);
+}
+.player-meta strong{color:var(--ink);font-size:14px;font-weight:700}
+
+/* ---------- section base ---------- */
+section{padding:56px 0}
+.sec-head{margin-bottom:30px;max-width:44em}
+.sec-tag{
+  font-size:13px;font-weight:700;letter-spacing:1.5px;
+  color:var(--peach);text-transform:uppercase;margin-bottom:8px;
+}
+h2{
+  font-size:clamp(22px,2.6vw,29px);font-weight:800;
+  line-height:1.35;color:var(--ink);margin-bottom:10px;
+}
+.sec-head p{color:var(--ink-2);font-size:15.5px}
+
+/* ---------- category cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px 20px;
+  transition:.25s;display:flex;flex-direction:column;gap:8px;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#ffc9d5}
+.card-icon{
+  width:42px;height:42px;border-radius:12px;
+  background:var(--peach-soft);display:grid;place-items:center;margin-bottom:4px;
+}
+.card-icon svg{width:20px;height:20px}
+.card h3{font-size:16.5px;font-weight:700;color:var(--ink)}
+.card p{font-size:14px;color:var(--ink-2);line-height:1.65}
+.card .more{
+  font-size:13px;font-weight:600;color:var(--peach-deep);
+  margin-top:auto;padding-top:6px;
+}
+
+/* ---------- feature list ---------- */
+.alt-bg{
+  background:linear-gradient(180deg,#fff5f7 0%,#fffafb 100%);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.feature-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.feature-list{display:flex;flex-direction:column;gap:22px}
+.feature-item{display:flex;gap:16px}
+.feature-num{
+  flex:none;width:36px;height:36px;border-radius:10px;
+  background:#fff;border:1px solid var(--line);
+  display:grid;place-items:center;
+  font-weight:800;font-size:14px;color:var(--peach-deep);
+}
+.feature-item h3{font-size:16.5px;font-weight:700;margin-bottom:4px}
+.feature-item p{font-size:14.5px;color:var(--ink-2)}
+.side-panel{
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:26px;box-shadow:var(--shadow);
+}
+.side-panel h3{font-size:17px;font-weight:800;margin-bottom:14px}
+.rank-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.rank-list li{
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:12px;border-bottom:1px dashed var(--line);
+  font-size:14.5px;
+}
+.rank-list li:last-child{border-bottom:none;padding-bottom:0}
+.rank-no{
+  flex:none;width:24px;height:24px;border-radius:7px;
+  background:var(--peach-soft);color:var(--peach-deep);
+  font-size:12.5px;font-weight:800;display:grid;place-items:center;
+}
+.rank-list li:nth-child(1) .rank-no{background:var(--peach);color:#fff}
+.rank-list em{font-style:normal;color:var(--ink-3);font-size:12.5px;margin-left:auto}
+
+/* ---------- guide ---------- */
+.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.guide{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:flex;gap:16px;
+}
+.guide-ico{
+  flex:none;width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(135deg,#ffe3e9,#ffd0da);
+  display:grid;place-items:center;
+}
+.guide-ico svg{width:21px;height:21px}
+.guide h3{font-size:16.5px;font-weight:700;margin-bottom:6px}
+.guide p{font-size:14.5px;color:var(--ink-2)}
+
+/* ---------- faq ---------- */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:860px}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 20px;transition:.2s;
+}
+details[open]{border-color:#ffc9d5;box-shadow:0 6px 18px rgba(217,58,92,.07)}
+summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";flex:none;font-size:20px;font-weight:400;color:var(--peach);
+  line-height:1;transition:.2s;
+}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;font-size:14.5px;color:var(--ink-2)}
+
+/* ---------- CTA band ---------- */
+.cta-band{
+  margin:56px 0;
+  background:linear-gradient(120deg,#ff5c7c,#ff8a5c);
+  border-radius:24px;padding:44px 36px;color:#fff;
+  display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;
+  box-shadow:0 16px 40px rgba(255,77,109,.28);
+}
+.cta-band h2{color:#fff;margin-bottom:6px}
+.cta-band p{color:rgba(255,255,255,.9);font-size:15px;max-width:34em}
+.cta-band .btn{background:#fff;color:var(--peach-deep);box-shadow:0 8px 20px rgba(0,0,0,.14)}
+.cta-band .btn:hover{background:#fff3f5}
+
+/* ---------- footer ---------- */
+.site-footer{
+  border-top:1px solid var(--line);background:#fff;
+  padding:40px 0 28px;margin-top:16px;
+}
+.footer-top{
+  display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;
+  padding-bottom:26px;border-bottom:1px solid var(--line);
+}
+.footer-brand{max-width:30em}
+.footer-brand p{font-size:13.5px;color:var(--ink-3);margin-top:10px;line-height:1.7}
+.footer-links{display:flex;gap:56px;flex-wrap:wrap}
+.footer-col h4{font-size:13px;font-weight:800;letter-spacing:1px;color:var(--ink);margin-bottom:10px}
+.footer-col a{display:block;font-size:13.5px;color:var(--ink-3);padding:3px 0;transition:.2s}
+.footer-col a:hover{color:var(--peach-deep)}
+.footer-bottom{
+  padding-top:20px;display:flex;justify-content:space-between;gap:14px;
+  flex-wrap:wrap;font-size:12.5px;color:var(--ink-3);
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-visual{max-width:520px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:720px){
+  .nav{display:none}
+  .header-inner{height:62px}
+  .hero{padding:40px 0 36px}
+  section{padding:42px 0}
+  .guide-grid{grid-template-columns:1fr}
+  .cta-band{padding:32px 24px;border-radius:18px}
+  .footer-links{gap:32px}
+}
+@media(max-width:520px){
+  .cards{grid-template-columns:1fr}
+  .hero-lead{font-size:15.5px}
+  .rank-list em{display:none}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="蜜桃视频首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg>
+      </span>
+      <span class="logo-text">蜜桃视频</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#categories">内容分类</a>
+      <a href="#features">观看体验</a>
+      <a href="#rank">本周热榜</a>
+      <a href="#guide">使用指南</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#start">立即观看</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">在线观影 · 高清播放</span>
+        <h1>蜜桃视频</h1>
+        <p class="hero-lead">
+          蜜桃视频是一个围绕在线视频观看搭建的主题页面，把剧集、电影、短片与专题内容按类型整理在一起，
+          方便你从首页出发，按兴趣进入对应栏目，再选择合适的清晰度开始播放。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start" id="start">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+            进入播放页
+          </a>
+          <a class="btn btn-ghost" href="#categories">浏览全部分类</a>
+        </div>
+        <div class="hero-note">
+          <span><i></i>按类型与地区分类</span>
+          <span><i></i>支持清晰度切换说明</span>
+          <span><i></i>无需注册即可浏览目录</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="player">
+          <svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="pv" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff6f8e"/>
+                <stop offset="1" stop-color="#ff9a5c"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="200" fill="#2a1f24"/>
+            <circle cx="70" cy="60" r="46" fill="url(#pv)" opacity=".55"/>
+            <circle cx="250" cy="150" r="60" fill="url(#pv)" opacity=".35"/>
+            <rect x="120" y="140" width="80" height="6" rx="3" fill="#fff" opacity=".35"/>
+            <rect x="120" y="152" width="46" height="6" rx="3" fill="#fff" opacity=".2"/>
+          </svg>
+          <div class="play-badge"><span>
+            <svg viewBox="0 0 24 24" fill="#ff4d6d"><path d="M8 5.5v13l11-6.5z"/></svg>
+          </span></div>
+        </div>
+        <div class="player-meta">
+          <strong>正在播放 · 精选推荐</strong>
+          <span>高清 1080P</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Content</div>
+        <h2>蜜桃视频内容分类</h2>
+        <p>首页按内容形态划分四个入口，每个入口对应不同的观看节奏：追连载、看完整片、刷短片、跟专题，选好再进，少走弯路。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8"/></svg></div>
+          <h3>剧集连载</h3>
+          <p>按更新顺序排列的连续剧集，适合固定时间追更，页面会标注已更新集数，方便判断是否跟上进度。</p>
+          <span class="more">进入剧集栏目 →</span>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M9 6v12"/></svg></div>
+          <h3>电影长片</h3>
+          <p>单集完整播放的电影内容，按类型与年份归类，适合一次看完、不想等更新的观看场景。</p>
+          <span class="more">进入电影栏目 →</span>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+          <h3>短片速看</h3>
+          <p>时长较短的片段与短视频内容，适合碎片时间浏览，列表按热度与发布时间两种顺序切换。</p>
+          <span class="more">进入短片栏目 →</span>
+        </article>
+        <article class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#ff4d6d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v4H4zM4 12h10v7H4zM17 12h3v7h-3z"/></svg></div>
+          <h3>专题合集</h3>
+          <p>围绕同一题材整理的播放清单，把分散的内容串成一条观看线索，适合按主题连续观看。</p>
+          <span class="more">进入专题栏目 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="alt-bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Experience</div>
+        <h2>在蜜桃视频观看时的体验细节</h2>
+        <p>播放体验决定了会不会留下来。下面四项是蜜桃视频页面中重点说明的部分，也是访问者最常关心的操作点。</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-num">01</div>
+            <div>
+              <h3>清晰度可切换</h3>
+              <p>播放器提供多档清晰度选项，网络波动时可手动下调，稳定后再切回高清，避免长时间缓冲。</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-num">02</div>
+            <div>
+              <h3>播放进度记忆</h3>
+              <p>同一内容再次打开时，可从上次停下的位置继续，适合分多次看完的长篇剧集。</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-num">03</div>
+            <div>
+              <h3>目录先看后播</h3>
+              <p>无需登录即可浏览分类与简介，确认内容符合预期后再进入播放，减少无效点击。</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-num">04</div>
+            <div>
+              <h3>移动端适配</h3>
+              <p>页面在小屏上自动收拢导航与卡片，播放器按屏幕宽度等比缩放，横竖屏都能正常观看。</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-panel" id="rank">
+          <h3>本周浏览热度</h3>
+          <ul class="rank-list">
+            <li><span class="rank-no">1</span>都市情感剧集<em>更新中</em></li>
+            <li><span class="rank-no">2</span>悬疑推理专题<em>合集</em></li>
+            <li><span class="rank-no">3</span>高分电影精选<em>长片</em></li>
+            <li><span class="rank-no">4</span>生活纪录短片<em>短片</em></li>
+            <li><span class="rank-no">5</span>经典重温片单<em>合集</em></li>
+          </ul>
+          <p style="margin-top:16px;font-size:13px;color:var(--ink-3);line-height:1.7">
+            热度按站内浏览与播放次数排序，仅反映近期关注度，不代表内容评价。
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">Guide</div>
+        <h2>蜜桃视频使用指南</h2>
+        <p>第一次访问时，按下面三步走基本不会迷路；如果你只是想随便看看，直接从分类页挑一个入口也可以。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="guide">
+          <div class="guide-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d93a5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <div>
+            <h3>第一步：按类型筛选</h3>
+            <p>在分类入口中选择剧集、电影、短片或专题，页面会展示该类型下的内容列表与简介。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <div class="guide-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d93a5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 12h6M12 9v6"/></svg></div>
+          <div>
+            <h3>第二步：确认内容信息</h3>
+            <p>进入详情页查看简介、集数与更新状态，判断是否符合自己的观看偏好，再决定是否播放。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <div class="guide-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d93a5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5.5v13l11-6.5z"/></svg></div>
+          <div>
+            <h3>第三步：开始播放</h3>
+            <p>点击播放进入播放器，根据网络情况选择清晰度，中途退出后再次进入可继续上次进度。</p>
+          </div>
+        </div>
+        <div class="guide">
+          <div class="guide-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#d93a5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6L21 9.6l-4.5 4.3 1.1 6.1L12 17l-5.6 3 1.1-6.1L3 9.6l6.4-1z"/></svg></div>
+          <div>
+            <h3>进阶：建立自己的片单</h3>
+            <p>把感兴趣的内容记下来，按专题顺序观看，比随机点开更容易看完一部完整的作品。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">FAQ</div>
+        <h2>关于蜜桃视频的常见问题</h2>
+        <p>以下问题来自访问者最常提出的疑问，回答仅针对本页说明的内容范围。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>蜜桃视频需要注册才能观看吗？</summary>
+          <p>浏览分类目录与内容简介不需要注册。播放环节的具体要求以播放页提示为准，页面会在进入播放前给出说明。</p>
+        </details>
+        <details>
+          <summary>播放卡顿时应该怎么处理？</summary>
+          <p>先在播放器中下调清晰度，等待缓冲完成；如果仍然卡顿，可以暂停片刻再继续，或切换网络环境后重试。</p>
+        </details>
+        <details>
+          <summary>内容更新频率是怎样的？</summary>
+          <p>连载类内容按各自更新节奏推进，详情页会标注当前状态。专题与片单会根据内容情况不定期调整。</p>
+        </details>
+        <details>
+          <summary>能否在手机上观看？</summary>
+          <p>可以。页面已做移动端适配，导航在小屏上收起，播放器按屏幕宽度等比缩放，横屏观看效果更佳。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2>从蜜桃视频首页开始找片</h2>
+        <p>选一个分类，看一段简介，再决定要不要开始播放。内容目录已经整理好，接下来只需要挑一部。</p>
+      </div>
+      <a class="btn" href="#categories">去挑一部</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg>
+          </span>
+          <span class="logo-text">蜜桃视频</span>
+        </a>
+        <p>蜜桃视频主题首页，汇集在线视频观看入口、内容分类与观看指南，帮助访问者按类型快速找到想看的内容。</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>内容</h4>
+          <a href="#categories">剧集连载</a>
+          <a href="#categories">电影长片</a>
+          <a href="#categories">短片速看</a>
+          <a href="#categories">专题合集</a>
+        </div>
+        <div class="footer-col">
+          <h4>帮助</h4>
+          <a href="#guide">使用指南</a>
+          <a href="#faq">常见问题</a>
+          <a href="#rank">本周热榜</a>
+          <a href="#features">观看体验</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 蜜桃视频 · 本站为内容导航与介绍页面</span>
+      <span>页面内容以实际播放页信息为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
