@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>妖精动漫-妖精动漫在线观看_妖精动漫新番连载与番剧推荐</title>
+<meta name="description" content="妖精动漫是专注妖精题材与奇幻风格的动漫主题首页，汇集新番连载、经典番剧推荐与角色设定解读，帮助你快速找到想看的妖精动漫作品与观看入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b2a4a'/%3E%3Cpath d='M16 6l2.6 6.2 6.8.6-5.1 4.5 1.5 6.7L16 20.4 10.2 24l1.5-6.7-5.1-4.5 6.8-.6z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2a4a;
+  --ink-soft:#43537a;
+  --paper:#f7f5f0;
+  --card:#ffffff;
+  --gold:#ffd166;
+  --teal:#2f8f83;
+  --pink:#e26d8a;
+  --line:#e3ded4;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,245,240,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{display:flex;align-items:center;gap:24px;padding:14px 0;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.5px;color:var(--ink);}
+.logo-mark{width:38px;height:38px;flex:0 0 38px;}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+nav.main a{
+  font-size:14.5px;color:var(--ink-soft);padding:7px 12px;border-radius:999px;
+  transition:.2s;
+}
+nav.main a:hover,nav.main a:focus-visible{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(27,42,74,.12);}
+nav.main a.cta{background:var(--ink);color:#fff;}
+nav.main a.cta:hover{background:#12203a;color:#fff;}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;padding:56px 0 48px;border-bottom:1px solid var(--line);}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1.5px;color:var(--teal);
+  border:1px solid #bfe0da;background:#eef8f6;
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;font-weight:600;
+}
+h1{font-size:clamp(30px,4.6vw,46px);line-height:1.2;letter-spacing:1px;font-weight:900;}
+h1 .hl{background:linear-gradient(transparent 62%,var(--gold) 62%);}
+.hero p.lead{margin-top:18px;font-size:16.5px;color:var(--ink-soft);max-width:34em;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#12203a;transform:translateY(-1px);}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--ink);}
+.btn[aria-disabled="true"]{opacity:.9;cursor:not-allowed;}
+.hero-art{position:relative;}
+.hero-art svg{width:100%;height:auto;filter:drop-shadow(0 14px 30px rgba(27,42,74,.18));}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px dashed var(--line);}
+.hero-stats div strong{display:block;font-size:22px;font-weight:800;color:var(--ink);}
+.hero-stats div span{font-size:13px;color:var(--ink-soft);}
+
+/* 通用区块 */
+section.block{padding:60px 0;}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:30px;flex-wrap:wrap;}
+.sec-head h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;letter-spacing:.5px;}
+.sec-head h2::before{
+  content:"";display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:var(--pink);margin-right:10px;vertical-align:middle;
+}
+.sec-head p{font-size:14.5px;color:var(--ink-soft);max-width:40em;}
+
+/* 卡片网格 */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;gap:12px;
+  transition:.22s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(27,42,74,.08);border-color:#cfc8ba;}
+.card .tag{
+  align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.5px;
+  padding:3px 10px;border-radius:999px;
+}
+.tag-teal{background:#e6f4f1;color:#1f6b61;}
+.tag-gold{background:#fff4d6;color:#8a6410;}
+.tag-pink{background:#fbe9ee;color:#a83a56;}
+.card h3{font-size:18px;font-weight:800;line-height:1.45;}
+.card p{font-size:14.5px;color:var(--ink-soft);}
+.card .meta{margin-top:auto;font-size:13px;color:#8a8578;display:flex;gap:10px;flex-wrap:wrap;}
+
+/* 作品列表 */
+.reel{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.poster{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+}
+.poster:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(27,42,74,.1);}
+.poster .thumb{aspect-ratio:3/4;position:relative;}
+.poster .thumb svg{width:100%;height:100%;}
+.poster .info{padding:12px 14px 16px;}
+.poster .info h4{font-size:15px;font-weight:700;margin-bottom:4px;}
+.poster .info span{font-size:12.5px;color:var(--ink-soft);}
+
+/* 指南列表 */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);}
+.guide-item{padding:26px 28px;border-bottom:1px solid var(--line);}
+.guide-item:nth-child(odd){border-right:1px solid var(--line);}
+.guide-item h3{font-size:17px;font-weight:800;margin-bottom:8px;}
+.guide-item h3 .num{color:var(--pink);margin-right:8px;font-style:normal;}
+.guide-item p{font-size:14.5px;color:var(--ink-soft);}
+
+/* 检索条 */
+.searchbar{
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;margin-top:26px;
+}
+.searchbar input[type=search]{
+  flex:1 1 220px;min-width:0;border:1px solid var(--line);border-radius:10px;
+  padding:11px 14px;font-size:15px;font-family:inherit;background:#fbfaf7;color:var(--ink);
+}
+.searchbar input[type=search]:focus{outline:2px solid var(--teal);outline-offset:1px;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;}
+.chip{
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:8px 16px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--ink-soft);
+  transition:.18s;
+}
+.chip:hover{border-color:var(--teal);color:var(--teal);}
+.chip.active{background:var(--ink);border-color:var(--ink);color:#fff;}
+.search-note{font-size:13px;color:#8a8578;margin-top:10px;}
+
+/* 数据条 */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.fact{background:linear-gradient(160deg,#fff,#fbf8f1);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+.fact strong{display:block;font-size:26px;font-weight:900;color:var(--teal);}
+.fact span{font-size:14px;color:var(--ink-soft);}
+
+/* 页尾 */
+footer.site{background:var(--ink);color:#cdd6e8;padding:46px 0 30px;margin-top:20px;}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+.foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:#fff;margin-bottom:12px;}
+.foot-brand svg{width:32px;height:32px;}
+footer.site p{font-size:14px;line-height:1.8;color:#a9b6d0;}
+footer.site h5{font-size:14px;color:#fff;margin-bottom:12px;letter-spacing:1px;}
+footer.site ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+footer.site ul a{font-size:14px;color:#a9b6d0;transition:.18s;}
+footer.site ul a:hover{color:var(--gold);}
+.copyright{margin-top:34px;padding-top:20px;border-top:1px solid #2f3f63;font-size:13px;color:#8695b3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+/* 响应式 */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-art{order:-1;max-width:340px;margin:0 auto;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .reel{grid-template-columns:1fr 1fr;}
+  .facts{grid-template-columns:1fr;}
+  .guide{grid-template-columns:1fr;}
+  .guide-item:nth-child(odd){border-right:none;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:600px){
+  body{font-size:15.5px;}
+  .head-inner{padding:12px 0;gap:12px;}
+  nav.main{margin-left:0;width:100%;}
+  nav.main a{padding:6px 10px;font-size:14px;}
+  .hero{padding:36px 0 34px;}
+  section.block{padding:44px 0;}
+  .grid-3,.grid-2{grid-template-columns:1fr;}
+  .foot-grid{grid-template-columns:1fr;}
+  .hero-stats{gap:18px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="妖精动漫 首页">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="#1b2a4a"/>
+        <path d="M20 7l3.3 7.8 8.4.7-6.4 5.6 1.9 8.3L20 25.2 12.8 29.4l1.9-8.3-6.4-5.6 8.4-.7z" fill="#ffd166"/>
+        <circle cx="20" cy="19" r="2.4" fill="#1b2a4a"/>
+      </svg>
+      <span>妖精动漫</span>
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#new">新番连载</a>
+      <a href="#pick">番剧推荐</a>
+      <a href="#guide">观看指南</a>
+      <a href="#lore">设定解读</a>
+      <a href="#lookup">作品检索</a>
+      <a class="cta" href="#new">开始观看</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">★ 妖精题材 · 奇幻风格专题首页</span>
+        <h1>妖精动漫</h1>
+        <p class="lead">妖精动漫围绕“妖精”这一形象主题组织内容：从当季新番连载，到森林精灵、花之妖精、魔女与异界生灵的经典番剧，再到角色设定与作品脉络的解读，帮助你在一个页面里判断“先看哪一部”。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#new">查看新番连载</a>
+          <a class="btn btn-ghost" href="#pick">先看番剧推荐</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4</strong><span>本季更新作品</span></div>
+          <div><strong>6</strong><span>经典推荐番剧</span></div>
+          <div><strong>3</strong><span>设定解读专题</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 340" role="img">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dff1ee"/>
+              <stop offset="1" stop-color="#f6e6ea"/>
+            </linearGradient>
+            <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+              <stop offset="1" stop-color="#bfe0da" stop-opacity=".75"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="340" height="320" rx="26" fill="url(#sky)"/>
+          <circle cx="272" cy="72" r="30" fill="#ffd166" opacity=".85"/>
+          <g opacity=".55" fill="#2f8f83">
+            <circle cx="58" cy="88" r="4"/><circle cx="92" cy="60" r="3"/>
+            <circle cx="300" cy="150" r="3.5"/><circle cx="72" cy="250" r="3"/>
+          </g>
+          <!-- 林间拱门 -->
+          <path d="M96 300V180a84 84 0 01168 0v120" fill="none" stroke="#7fb8ab" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+          <!-- 妖精本体 -->
+          <g>
+            <ellipse cx="180" cy="196" rx="46" ry="54" fill="#1b2a4a" opacity=".9"/>
+            <path d="M180 150c14 0 24 10 24 24s-10 26-24 26-24-12-24-26 10-24 24-24z" fill="#f7f5f0"/>
+            <circle cx="170" cy="176" r="3.2" fill="#1b2a4a"/>
+            <circle cx="190" cy="176" r="3.2" fill="#1b2a4a"/>
+            <path d="M174 188q6 5 12 0" stroke="#e26d8a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M134 196c-26-22-40-8-30 10 8 14 22 16 34 8z" fill="url(#wing)"/>
+            <path d="M226 196c26-22 40-8 30 10-8 14-22 16-34 8z" fill="url(#wing)"/>
+            <path d="M156 246l-8 44h64l-8-44z" fill="#2f8f83" opacity=".9"/>
+          </g>
+          <!-- 星光 -->
+          <g fill="#ffd166">
+            <path d="M180 34l3.4 8 8.6.7-6.6 5.7 2 8.6-7.4-4.4-7.4 4.4 2-8.6-6.6-5.7 8.6-.7z"/>
+          </g>
+          <g stroke="#2f8f83" stroke-width="2" opacity=".5">
+            <path d="M40 300q30-14 60 0"/><path d="M260 300q30-14 60 0"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 新番连载 -->
+  <section class="block" id="new">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>新番连载 · 本季妖精动漫更新</h2>
+        <p>按更新节奏排列，标注题材标签与当前进度，方便判断哪部适合追更、哪部适合攒着一次看完。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="tag tag-teal">奇幻 · 周更</span>
+          <h3>森之契约的妖精使</h3>
+          <p>以森林守护妖精与人类契约者为主线，前四集完成世界观铺陈，第五集起转向群像冲突。适合喜欢慢热设定的观众。</p>
+          <p class="meta"><span>更新至第 6 话</span><span>单集 24 分钟</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-gold">治愈 · 双周更</span>
+          <h3>花妖精的午后茶会</h3>
+          <p>单元剧结构，每集一棵花树、一位妖精。叙事轻，画面密，适合当作睡前番；对连续剧情依赖低，从任意一集进入都不影响理解。</p>
+          <p class="meta"><span>更新至第 4 话</span><span>单集 12 分钟</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-pink">冒险 · 周更</span>
+          <h3>异界妖精与漂泊之书</h3>
+          <p>把妖精设定嵌入异世界旅行框架，主线是寻找失落的图鉴页。战斗场面占比中等，信息量集中在对话与地图线索上。</p>
+          <p class="meta"><span>更新至第 8 话</span><span>单集 24 分钟</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-teal">悬疑 · 周更</span>
+          <h3>夜雾里的精灵信使</h3>
+          <p>妖精以“信使”身份出现，每封信推动一条支线。节奏偏紧，适合一次连看两三集；对细节伏笔的回收较完整。</p>
+          <p class="meta"><span>更新至第 5 话</span><span>单集 23 分钟</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 番剧推荐 -->
+  <section class="block" id="pick" style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>番剧推荐 · 妖精动漫经典片单</h2>
+        <p>从补番角度出发，按“设定密度”和“入门难度”给出组合建议，而不是单纯罗列片名。</p>
+      </div>
+      <div class="reel">
+        <article class="poster">
+          <div class="thumb">
+            <svg viewBox="0 0 120 160" aria-hidden="true">
+              <rect width="120" height="160" fill="#e6f4f1"/>
+              <circle cx="60" cy="62" r="26" fill="#2f8f83" opacity=".85"/>
+              <path d="M34 96c10-14 42-14 52 0v34H34z" fill="#1b2a4a" opacity=".85"/>
+              <circle cx="52" cy="58" r="3" fill="#fff"/><circle cx="68" cy="58" r="3" fill="#fff"/>
+              <path d="M20 130h80" stroke="#bfe0da" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="info"><h4>林间的低语者</h4><span>入门友好 · 全 12 话</span></div>
+        </article>
+        <article class="poster">
+          <div class="thumb">
+            <svg viewBox="0 0 120 160" aria-hidden="true">
+              <rect width="120" height="160" fill="#fff4d6"/>
+              <circle cx="60" cy="60" r="24" fill="#ffd166"/>
+              <path d="M36 92c8-16 40-16 48 0v36H36z" fill="#8a6410" opacity=".8"/>
+              <path d="M60 34l4 9 10 .8-7.6 6.6 2.3 9.8L60 55.4l-8.7 4.8 2.3-9.8L46 43.8l10-.8z" fill="#fff"/>
+            </svg>
+          </div>
+          <div class="info"><h4>星屑妖精纪行</h4><span>设定密度高 · 全 24 话</span></div>
+        </article>
+        <article class="poster">
+          <div class="thumb">
+            <svg viewBox="0 0 120 160" aria-hidden="true">
+              <rect width="120" height="160" fill="#fbe9ee"/>
+              <circle cx="60" cy="58" r="25" fill="#e26d8a" opacity=".9"/>
+              <path d="M32 94c10-16 46-16 56 0v34H32z" fill="#a83a56" opacity=".8"/>
+              <path d="M24 78c10-10 18-4 14 6-4 8-14 8-14-6z" fill="#fff" opacity=".8"/>
+              <path d="M96 78c-10-10-18-4-14 6 4 8 14 8 14-6z" fill="#fff" opacity=".8"/>
+            </svg>
+          </div>
+          <div class="info"><h4>花冠与契约</h4><span>治愈向 · 全 10 话</span></div>
+        </article>
+        <article class="poster">
+          <div class="thumb">
+            <svg viewBox="0 0 120 160" aria-hidden="true">
+              <rect width="120" height="160" fill="#e9edf7"/>
+              <circle cx="60" cy="60" r="24" fill="#43537a"/>
+              <path d="M34 96c10-16 42-16 52 0v34H34z" fill="#1b2a4a"/>
+              <path d="M60 28v18M48 40h24" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="52" cy="58" r="3" fill="#ffd166"/><circle cx="68" cy="58" r="3" fill="#ffd166"/>
+            </svg>
+          </div>
+          <div class="info"><h4>夜雾信使</h4><span>悬疑向 · 全 13 话</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 观看指南 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>观看指南 · 怎么开始看妖精动漫</h2>
+        <p>如果你第一次接触这一题材，可以按下面的顺序建立认知，避免一上来就被设定名词劝退。</p>
+      </div>
+      <div class="guide">
+        <div class="guide-item">
+          <h3><em class="num">01</em>先看单元剧，再看连续剧</h3>
+          <p>单元剧每集独立，能快速熟悉妖精的形象分类与常见母题；连续剧依赖前情，留到第二步。妖精动漫作品大多共享“自然之物有灵”的底层设定，先建立这个印象最省力。</p>
+        </div>
+        <div class="guide-item">
+          <h3><em class="num">02</em>留意三类角色标签</h3>
+          <p>观察角色属于“守护型、契约型还是流浪型”。守护型多以森林与泉眼为舞台，契约型围绕人与妖精的交换展开，流浪型承担异界旅行叙事。标签决定了一部作品的冲突来源。</p>
+        </div>
+        <div class="guide-item">
+          <h3><em class="num">03</em>按单集时长安排追更</h3>
+          <p>12 分钟短篇适合碎片时间，24 分钟正片适合集中观看。若同时追两三部，建议把短篇放白天、正片放晚上，减少剧情串味。</p>
+        </div>
+        <div class="guide-item">
+          <h3><em class="num">04</em>补番时优先看首集完成度</h3>
+          <p>妖精题材首集通常承担世界观展示。若首集在十分钟内交代清楚舞台、角色关系与一条小冲突，后续节奏一般更稳，可优先列入片单。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 设定解读 -->
+  <section class="block" id="lore" style="background:#fffdf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>设定解读 · 妖精动漫里的形象谱系</h2>
+        <p>把常见的妖精形象拆开看，能更快判断一部妖精动漫属于哪种叙事传统。</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <span class="tag tag-teal">自然谱系</span>
+          <h3>森林精灵与花之妖精</h3>
+          <p>形象直接取自草木、花期与季节更替，能力往往与生长、治愈、气候相关。这类设定的冲突多来自“人类开发”与“自然秩序”的对立，情绪基调偏温柔。</p>
+          <p class="meta"><span>代表母题：守护、共生</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-gold">契约谱系</span>
+          <h3>契约妖精与使魔</h3>
+          <p>妖精与人类之间存在交换关系，力量有代价、有期限。叙事重心落在“约定是否被遵守”，常见反转来自契约条款的隐藏解释。</p>
+          <p class="meta"><span>代表母题：代价、信任</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-pink">异界谱系</span>
+          <h3>漂泊妖精与信使</h3>
+          <p>妖精作为跨界存在，承担引路、传信、守卫入口的职能。故事往往以旅程推进，世界观通过一站一站的地点展开，适合长线连载。</p>
+          <p class="meta"><span>代表母题：旅途、边界</span></p>
+        </article>
+        <article class="card">
+          <span class="tag tag-teal">日常谱系</span>
+          <h3>生活系小妖精</h3>
+          <p>体型小、能力弱，但与日常物件绑定，如茶杯、书页、灯芯。冲突轻微，看点在于细节想象力，是妖精动漫中最容易入门的一支。</p>
+          <p class="meta"><span>代表母题：陪伴、细节</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 检索 -->
+  <section class="block" id="lookup">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>作品检索 · 按关键词找妖精动漫</h2>
+        <p>输入片名或题材关键词，下方片单会即时筛选；也可直接点选标签快速缩小范围。</p>
+      </div>
+      <div class="searchbar" role="search">
+        <input type="search" id="q" placeholder="例如：森林、契约、治愈、信使" aria-label="搜索妖精动漫作品">
+        <div class="chips" id="chips">
+          <button class="chip active" type="button" data-tag="全部">全部</button>
+          <button class="chip" type="button" data-tag="奇幻">奇幻</button>
+          <button class="chip" type="button" data-tag="治愈">治愈</button>
+          <button class="chip" type="button" data-tag="冒险">冒险</button>
+          <button class="chip" type="button" data-tag="悬疑">悬疑</button>
+        </div>
+      </div>
+      <p class="search-note" id="note">共 4 部作品，可按片名或标签筛选。</p>
+      <div class="grid-2" id="results" style="margin-top:18px;">
+        <article class="card" data-tags="奇幻 森林 契约" data-name="森之契约的妖精使">
+          <span class="tag tag-teal">奇幻</span>
+          <h3>森之契约的妖精使</h3>
+          <p>关键词：森林、契约、群像。慢热型世界观，适合喜欢设定的观众。</p>
+        </article>
+        <article class="card" data-tags="治愈 花 日常" data-name="花妖精的午后茶会">
+          <span class="tag tag-gold">治愈</span>
+          <h3>花妖精的午后茶会</h3>
+          <p>关键词：花、日常、单元剧。篇幅短，任意一集可独立观看。</p>
+        </article>
+        <article class="card" data-tags="冒险 异界 旅行" data-name="异界妖精与漂泊之书">
+          <span class="tag tag-pink">冒险</span>
+          <h3>异界妖精与漂泊之书</h3>
+          <p>关键词：异界、旅行、图鉴。以地图线索推进，信息集中在对话中。</p>
+        </article>
+        <article class="card" data-tags="悬疑 信使 夜雾" data-name="夜雾里的精灵信使">
+          <span class="tag tag-teal">悬疑</span>
+          <h3>夜雾里的精灵信使</h3>
+          <p>关键词：信使、伏笔、支线。适合连看，细节回收较完整。</p>
+        </article>
+      </div>
+      <div class="hero-actions" style="margin-top:26px;">
+        <a class="btn btn-primary" href="#new">回到新番连载</a>
+        <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;">下载片单</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据与说明 -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="facts">
+        <div class="fact"><strong>妖精动漫</strong><span>以妖精形象为核心组织内容的主题首页，含新番、片单、指南与设定解读。</span></div>
+        <div class="fact"><strong>4 部</strong><span>本季在更作品，均标注更新节奏与单集时长，便于安排追更。</span></div>
+        <div class="fact"><strong>4 类</strong><span>形象谱系：自然、契约、异界、日常，帮助快速判断作品传统。</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="11" fill="#2f3f63"/>
+            <path d="M20 7l3.3 7.8 8.4.7-6.4 5.6 1.9 8.3L20 25.2 12.8 29.4l1.9-8.3-6.4-5.6 8.4-.7z" fill="#ffd166"/>
+          </svg>
+          <span>妖精动漫</span>
+        </div>
+        <p>妖精动漫是一个围绕妖精题材动漫整理内容与观看路径的主题首页，持续更新新番进度、补番片单与设定解读，让每一次点开都有明确目的。</p>
+      </div>
+      <div>
+        <h5>浏览内容</h5>
+        <ul>
+          <li><a href="#new">新番连载</a></li>
+          <li><a href="#pick">番剧推荐</a></li>
+          <li><a href="#guide">观看指南</a></li>
+          <li><a href="#lore">设定解读</a></li>
+          <li><a href="#lookup">作品检索</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>常见问题</h5>
+        <ul>
+          <li><a href="#guide">第一次看从哪部开始</a></li>
+          <li><a href="#guide">单元剧和连续剧怎么区分</a></li>
+          <li><a href="#lore">妖精形象有哪几类</a></li>
+          <li><a href="#new">更新节奏如何安排</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>妖精动漫 · 妖精题材动漫主题首页</span>
+      <span>内容以本页公开信息为准，片单与进度随更新调整。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var chips = document.getElementById('chips');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#results .card'));
+  var note = document.getElementById('note');
+  var activeTag = '全部';
+
+  function apply(){
+    var kw = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(card){
+      var text = (card.getAttribute('data-name') + ' ' + card.getAttribute('data-tags') + ' ' + card.textContent).toLowerCase();
+      var tagOk = activeTag === '全部' || card.getAttribute('data-tags').indexOf(activeTag) > -1;
+      var kwOk = !kw || text.indexOf(kw) > -1;
+      var ok = tagOk && kwOk;
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    note.textContent = kw || activeTag !== '全部'
+      ? '筛选到 ' + shown + ' 部作品' + (activeTag !== '全部' ? '（标签：' + activeTag + '）' : '') + (kw ? '（关键词：' + q.value.trim() + '）' : '') + '。'
+      : '共 ' + shown + ' 部作品，可按片名或标签筛选。';
+  }
+
+  chips.addEventListener('click', function(e){
+    var btn = e.target.closest('.chip');
+    if(!btn) return;
+    Array.prototype.forEach.call(chips.querySelectorAll('.chip'), function(c){ c.classList.remove('active'); });
+    btn.classList.add('active');
+    activeTag = btn.getAttribute('data-tag');
+    apply();
+  });
+
+  q.addEventListener('input', apply);
+})();
+</script>
+</body>
+</html>
